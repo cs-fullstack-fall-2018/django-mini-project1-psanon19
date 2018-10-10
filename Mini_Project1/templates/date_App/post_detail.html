@@ -1,0 +1,12 @@
+{% extends 'date_App/base.html' %}
+{% block content %}
+<div class="post">
+    {% if TimeSheet.date_of_entry %}
+    <div class="date">
+        {{ TimeSheet.date_of_entry }}
+    </div>
+    {% endif %}
+    <h1>{{ TimeSheet.name }}</h1>
+    <p>{{ TimeSheet.hours|linebreaksbr }} hours</p>
+</div>
+{% endblock %}

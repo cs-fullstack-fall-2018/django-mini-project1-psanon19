@@ -1,0 +1,19 @@
+{% extends 'date_App/base.html' %}
+{% block content %}
+
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for posts in posts %}
+            <div class="post">
+                <div class="date">
+                    <p>published: {{ TimeSheet.date_of_entry }}</p>
+                </div>
+                <h1>>{{ TimeSheet.name }}</h1>
+                <p>{{ TimeSheet.subject|linebreaksbr }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
